@@ -1,0 +1,26 @@
+---
+
+- name: Upgrade all packages to the latest version
+  apt:
+    name: "*"
+    state: latest
+
+- name: Get and extract Teeworlds archive into /opt/
+  unarchive:
+    src: https://downloads.teeworlds.com/teeworlds-{{ teeworlds_version }}-linux_x86_64.tar.gz
+    dest: /opt/
+    remote_src: yes
+    
+- name: Add group "teeworlds"
+  group: name=teeworlds
+
+- name: Add user "teeworlds"
+  user: name=teeworlds group=teeworlds
+
+- name: Create a symbolic link without version number
+  file:
+    src: /opt/teeworlds-{{ teeworlds_version }}-linux_x86_64
+    dest: /opt/teeworlds
+    owner: teeworlds
+    group: teeworlds
+    state: link
