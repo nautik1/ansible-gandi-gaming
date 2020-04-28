@@ -23,7 +23,10 @@ How to use
   ```
 - `git clone https://github.com/nautik1/ansible-teeworlds.git`
 - `cp hosts.yml.example hosts.yml`
-- Edit `hosts.yml` with the IP or hostname of your server, the Teeworlds version to download (check the latest available at https://downloads.teeworlds.com/) and any other configuration for your Teeworlds server
+- Edit `hosts.yml`:
+  - Set the IP or hostname of your server,
+  - Set the Teeworlds version to download (you can check the latest available at https://downloads.teeworlds.com/)
+  - Add any other configuration you want for your Teeworlds server
 - `ansible-playbook -i hosts.yml install.yml`
 
 You're all set ! Get the client on your laptop and join `<your-server-ip-or-hostname>:8303`.
