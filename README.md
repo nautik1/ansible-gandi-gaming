@@ -1,5 +1,5 @@
-Role Name
-=========
+Ansible-Teeworlds
+=================
 
 This role helps installing a Teeworlds server.
 
@@ -8,31 +8,34 @@ Requirements
 
 Any debian-based linux using systemd should work, preferably Ubuntu 18.04.
 
-Role Variables
+Tested with:
+- Teeworlds 0.7.5
+- Ansible 2.9.7
+- Ubuntu 18.04 on [Gandi Cloud](https://www.gandi.net/fr/cloud)
+
+How to use
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- Create your server with any debian-based system. On Gandi, as simple as:
+  ```
+  gandi vm create --datacenter="FR-SD5" --memory=1024 --cores=1 --sshkey ~/.ssh/id_rsa.pub --size="10G" --ip-version=4 --login="my-login" --hostname="my-teeworld-serv" --password --image="Ubuntu 18.04 LTS"
+  gandi vm show teeworld-serv
+  ```
+- `git clone https://github.com/nautik1/ansible-teeworlds.git`
+- `cp hosts.yml.example hosts.yml`
+- Edit `hosts.yml` with the IP or hostname of your server, the Teeworlds version to download (check the latest available at https://downloads.teeworlds.com/) and any other configuration for your Teeworlds server
+- `ansible-playbook -i hosts.yml install.yml`
+
+You're all set ! Get the client on your laptop and join `<your-server-ip-or-hostname>:8303`.
+
+/!\ Be careful to install the same Teeworlds version on your computer as the one running on your server, or you might not be able to join !
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+No external role used; Teeworlds server downloaded from https://downloads.teeworlds.com
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+[WTFPL](https://en.wikipedia.org/wiki/WTFPL)
