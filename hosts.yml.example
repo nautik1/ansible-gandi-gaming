@@ -1,3 +1,11 @@
 all:
   hosts:
-    <ip-ou-hostname>:
+    <ip-or-hostname>:
+  vars:
+    teeworlds_version: 0.7.5
+    teeworlds_server_name: Another teeworlds server
+    install_path: /opt/teeworlds
+    extra_configs: |
+      sv_max_clients 15
+      # Any other option here
+      # See https://www.teeworlds.com/?page=docs&wiki=server_settings

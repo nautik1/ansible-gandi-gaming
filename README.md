@@ -6,7 +6,7 @@ This role helps installing a Teeworlds server.
 Requirements
 ------------
 
-Any debian-based linux should work, preferably Ubuntu 18.04.
+Any debian-based linux using systemd should work, preferably Ubuntu 18.04.
 
 Role Variables
 --------------

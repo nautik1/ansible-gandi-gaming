@@ -1,0 +1,7 @@
+[Unit]
+Description=Teeworlds server
+[Service]
+ExecStart={{install_path}}/teeworlds_srv -f /etc/teeworlds/config.cfg
+User=teeworlds
+[Install]
+WantedBy=multi-user.target
