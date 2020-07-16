@@ -1,0 +1,11 @@
+---
+    - name: Install Teeworlds
+      hosts: teeworlds-serv
+      remote_user: root
+      # remote_user: user
+      # become: yes
+      # become_method: sudo
+      roles:
+        - nautik1.teeworlds
+      vars:
+        teeworlds_version: 0.7.5

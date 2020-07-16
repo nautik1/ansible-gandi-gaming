@@ -1,42 +1,42 @@
-Ansible-Teeworlds
-=================
+# Ansible-Gandi-Gaming
 
-This role helps installing a Teeworlds server.
+This playbook helps installing various fun games easily on Gandi Cloud
 
-Requirements
-------------
+## Requirements
 
-Any debian-based linux using systemd should work, preferably Ubuntu 18.04.
+Any debian-based linux using systemd should work, preferably Ubuntu 20.04
 
 Tested with:
-- Teeworlds 0.7.5
 - Ansible 2.9.7
-- Ubuntu 18.04 on [Gandi Cloud](https://www.gandi.net/fr/cloud)
+- Ubuntu 20.04 on [Gandi Cloud](https://www.gandi.net/fr/cloud)
 
-How to use
---------------
+## How to use
 
-- Create your server with any debian-based system. On Gandi, as simple as:
+- Create your game server(s) with any debian-based system. On Gandi, as simple as:
   ```
-  gandi vm create --datacenter="FR-SD5" --memory=1024 --cores=1 --sshkey ~/.ssh/id_rsa.pub --size="10G" --ip-version=4 --login="my-login" --hostname="my-teeworld-serv" --password --image="Ubuntu 18.04 LTS"
+  gandi vm create --datacenter="FR-SD5" --memory=1024 --cores=1 --sshkey ~/.ssh/id_rsa.pub --size="10G" --ip-version=4 --login="my-login" --hostname="my-teeworld-serv" --password --image="Ubuntu 20.04 LTS"
   gandi vm show teeworld-serv
   ```
-- `git clone https://github.com/nautik1/ansible-teeworlds.git`
+- Clone this repository
+- Install game roles: `ansible-galaxy install -r requirements.yml`
 - `cp hosts.yml.example hosts.yml`
 - Edit `hosts.yml`:
-  - Set the IP or hostname of your server,
-  - Set the Teeworlds version to download (you can check the latest available at https://downloads.teeworlds.com/)
-  - Add any other configuration you want for your Teeworlds server
-- `ansible-playbook -i hosts.yml install.yml`
+  - Set the IP or hostname of your server in the wanted groups,
+  - Add any other configuration you want for your game servers (see roles below)
+- `ansible-playbook -i hosts.yml start-playing.yml`
 
-You're all set ! Get the client on your laptop and join `<your-server-ip-or-hostname>:8303`.
+You're all set !
 
-/!\ Be careful to install the same Teeworlds version on your computer as the one running on your server, or you might not be able to join !
+## Installable games
 
-Dependencies
-------------
+### Teeworlds
 
-No external role used; Teeworlds server downloaded from https://downloads.teeworlds.com
+Teeworlds is installed using [this awesome role](https://galaxy.ansible.com/nautik1/teeworlds)
+
+Few notes:
+- After install, join `<your-server-ip-or-hostname>:8303`
+- Make sure to install the same Teeworlds version on your computer as the one running on your server, or you might
+  not be able to join!
 
 License
 -------
