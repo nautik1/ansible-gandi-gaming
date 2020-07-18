@@ -23,7 +23,14 @@ Tested with:
 - Edit `hosts.yml`:
   - Set the IP or hostname of your server in the wanted groups,
   - Add any other configuration you want for your game servers (see roles below)
-- `ansible-playbook -i hosts.yml start-playing.yml`
+- Run the whole playbook:
+  ```
+  ansible-playbook -i hosts.yml start-playing.yml
+  ```
+  Or install only specified games:
+  ```
+  ansible-playbook -i hosts.yml start-playing.yml --tags minetest
+  ```
 
 You're all set !
 
@@ -37,6 +44,14 @@ Few notes:
 - After install, join `<your-server-ip-or-hostname>:8303`
 - Make sure to install the same Teeworlds version on your computer as the one running on your server, or you might
   not be able to join!
+
+### Minetest
+
+Minetest is installed using [this awesome role](https://galaxy.ansible.com/nautik1/minetest)
+
+Few notes:
+- After install, join `<your-server-ip-or-hostname>:30000`
+- Install the client (preferably using minetest ppa): https://www.minetest.net/downloads/
 
 License
 -------

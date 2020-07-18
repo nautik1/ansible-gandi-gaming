@@ -3,3 +3,4 @@
 # Install with: `ansible-galaxy install -r requirements.yml`
 
 - name: nautik1.teeworlds
+- name: nautik1.minetest
