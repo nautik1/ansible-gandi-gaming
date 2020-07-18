@@ -34,6 +34,11 @@ Tested with:
 
 You're all set !
 
+When you are done playing, just can just destroy your VMs (you can reinstall anyway):
+```
+gandi vm delete <your-vm-names>
+```
+
 ## Installable games
 
 ### Teeworlds
