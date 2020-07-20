@@ -43,7 +43,7 @@ gandi vm delete <your-vm-names>
 
 ### Teeworlds
 
-Teeworlds is installed using [this awesome role](https://galaxy.ansible.com/nautik1/teeworlds)
+Teeworlds is installed using [this pretty simple role](https://galaxy.ansible.com/nautik1/teeworlds)
 
 Few notes:
 - After install, join `<your-server-ip-or-hostname>:8303`
@@ -52,7 +52,7 @@ Few notes:
 
 ### Minetest
 
-Minetest is installed using [this awesome role](https://galaxy.ansible.com/nautik1/minetest)
+Minetest is installed using [this pretty simple role](https://galaxy.ansible.com/nautik1/minetest)
 
 Few notes:
 - After install, join `<your-server-ip-or-hostname>:30000`
@@ -60,7 +60,7 @@ Few notes:
 
 ### Xonotic
 
-Xonotic is installed using [this awesome role](https://galaxy.ansible.com/nautik1/xonotic)
+Xonotic is installed using [this pretty simple role](https://galaxy.ansible.com/nautik1/xonotic)
 
 Few notes:
 - After install, you can join `<your-server-ip-or-hostname>:26000`
