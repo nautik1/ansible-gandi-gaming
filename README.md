@@ -58,6 +58,13 @@ Few notes:
 - After install, join `<your-server-ip-or-hostname>:30000`
 - Install the client (preferably using minetest ppa): https://www.minetest.net/downloads/
 
+### Xonotic
+
+Xonotic is installed using [this awesome role](https://galaxy.ansible.com/nautik1/xonotic)
+
+Few notes:
+- After install, you can join `<your-server-ip-or-hostname>:26000`
+
 License
 -------
 

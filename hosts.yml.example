@@ -1,6 +1,6 @@
 teeworlds-serv:
   hosts:
-    <ip-or-hostname>:
+    <ip-or-fqdn>:
   vars:
     teeworlds_server_name: my-teeworlds-server
     extra_configs: |
@@ -8,3 +8,11 @@ teeworlds-serv:
       sv_max_clients_per_ip 30
       sv_register 0
       password gandi
+
+minetest-serv:
+  hosts:
+    <ip-or-fqdn>:
+
+xonotic-serv:
+  hosts:
+    <ip-or-fqdn>:
