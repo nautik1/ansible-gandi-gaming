@@ -1,39 +1,50 @@
 ---
-    - name: Install Teeworlds
-      hosts: teeworlds-serv
-      remote_user: root
-      # remote_user: user
-      # become: yes
-      # become_method: sudo
-      roles:
-        - nautik1.teeworlds
-      vars:
-        teeworlds_version: 0.7.5
-      tags:
-        - teeworlds
+- name: Install Teeworlds
+  hosts: teeworlds-serv
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+  roles:
+    - nautik1.teeworlds
+  vars:
+    teeworlds_version: 0.7.5
+  tags:
+    - teeworlds
 
-    - name: Install Minetest
-      hosts: minetest-serv
-      remote_user: root
-      # remote_user: user
-      # become: yes
-      # become_method: sudo
-      roles:
-        - nautik1.minetest
-      vars:
-        minetest_version: 5.3*
-      tags:
-        - minetest
+- name: Install Minetest
+  hosts: minetest-serv
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+  roles:
+    - nautik1.minetest
+  vars:
+    minetest_version: 5.3*
+  tags:
+    - minetest
 
-    - name: Install Xonotic
-      hosts: xonotic-serv
-      remote_user: root
-      # remote_user: user
-      # become: yes
-      # become_method: sudo
-      roles:
-        - nautik1.xonotic
-      vars:
-        xonotic_version: 0.8.2
-      tags:
-        - xonotic
+- name: Install Xonotic
+  hosts: xonotic-serv
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+  roles:
+    - nautik1.xonotic
+  vars:
+    xonotic_version: 0.8.2
+  tags:
+    - xonotic
+
+- name: Install Supertuxkart
+  hosts: supertuxkart-serv
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+  roles:
+    - nautik1.supertuxkart
+  tags:
+    - supertuxkart
