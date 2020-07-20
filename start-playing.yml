@@ -24,3 +24,16 @@
         minetest_version: 5.3*
       tags:
         - minetest
+
+    - name: Install Xonotic
+      hosts: xonotic-serv
+      remote_user: root
+      # remote_user: user
+      # become: yes
+      # become_method: sudo
+      roles:
+        - nautik1.xonotic
+      vars:
+        xonotic_version: 0.8.2
+      tags:
+        - xonotic
