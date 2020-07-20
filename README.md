@@ -65,6 +65,14 @@ Xonotic is installed using [this pretty simple role](https://galaxy.ansible.com/
 Few notes:
 - After install, you can join `<your-server-ip-or-hostname>:26000`
 
+### Supertuxkart
+
+Supertuxkart is installed using [this pretty simple role](https://galaxy.ansible.com/nautik1/supertuxkart)
+
+Few notes:
+- This role takes quite a while to execute, as it builds from source
+- After install, you can join `<your-server-ip-or-hostname>:2759`
+
 License
 -------
 
