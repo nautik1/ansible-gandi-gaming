@@ -16,3 +16,7 @@ minetest-serv:
 xonotic-serv:
   hosts:
     <ip-or-fqdn>:
+
+supertuxkart-serv:
+  hosts:
+    <ip-or-fqdn>:

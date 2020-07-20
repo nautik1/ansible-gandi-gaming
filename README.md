@@ -7,7 +7,7 @@ This playbook helps installing various fun games easily on Gandi Cloud
 Any debian-based linux using systemd should work, preferably Ubuntu 20.04
 
 Tested with:
-- Ansible 2.9.7
+- Ansible 2.9
 - Ubuntu 20.04 on [Gandi Cloud](https://www.gandi.net/fr/cloud)
 
 ## How to use
